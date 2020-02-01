@@ -10,7 +10,7 @@ This script is still being updated, as i want to keep expanding it to include su
 box and other quality of life things for the lazy dev in us all.
 
 
-# Some things i want to add:
+## Some things i want to add:
 
 - Support for creating projects with linting configs pre-grenerated.
 
