@@ -14,9 +14,8 @@ filename_Js = input("""What do you want to name you Js file?
 if empty - name will be: index.js (reccomended for first file)""")
 
 
-
 def main():
-    
+
     if(filename_Html == ""):
         with open("index.html", "w") as file:
             file.write(boilerplates.html_boilerplate)
@@ -29,15 +28,15 @@ def main():
             boilerplates.cssPath = filename_Css
             file.write(boilerplates.css_normalize)
     else:
-        with open(filename_Css + "css", "w") as file:
+        with open(filename_Css + ".css", "w") as file:
             file.write(boilerplates.css_normalize)
 
     if(filename_Js == ""):
-         with open("index.js", "w") as file:
-            boilerplates.jsPath = filename_Js 
+        with open("index.js", "w") as file:
+            boilerplates.jsPath = filename_Js
             file.write(boilerplates.js_Boilerplate)
     else:
-         with open(filename_Js + ".js", "w") as file:
+        with open(filename_Js + ".js", "w") as file:
             file.write(boilerplates.js_Boilerplate)
 
 
