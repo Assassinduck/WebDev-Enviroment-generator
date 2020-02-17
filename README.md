@@ -30,6 +30,8 @@ box and other quality of life things for the lazy dev in us all.
 
 - Creating Js file.
 
+- Automatically opening VS Code where the files are generated.
+
 ## Features in early prototyping
 - Rudementary file downloading works for one picture. Need to find out where and what to download for each framework.
 
