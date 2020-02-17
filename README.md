@@ -14,6 +14,24 @@ box and other quality of life things for the lazy dev in us all.
 
 - Support for creating projects with linting configs pre-grenerated.
 
-- Support for creating projects With frameworks.
+- Support for creating projects with frameworks (React, Vue, etc..).
 
 - Other things i probably havent thought about yet.
+
+## Features currently done
+
+- Supports custom names for all files based on user-input
+
+- Supports dynamic linking based on the file names when created.
+
+- Creating HTML5 file with boilerplate skeleton
+
+- Creating one empty CSS3 file and one CSS3 file that normalizes the DOM (Credit to: https://github.com/necolas/normalize.css/)
+
+- Creating Js file.
+
+## Features in early prototyping
+- Rudementary file downloading works for one picture. Need to find out where and what to download for each framework.
+
+
+
