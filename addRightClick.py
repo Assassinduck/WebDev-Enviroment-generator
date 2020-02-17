@@ -1,4 +1,4 @@
-from _winreg import *
+import winreg
 
 
 def define_action_on(filetype, registry_title, command, title=None):
@@ -8,20 +8,20 @@ def define_action_on(filetype, registry_title, command, title=None):
         registry_title: the title of the subkey, not important, but probably ought to be relevant. If title=None, this is the text that will show up in the context menu.
     """
     # all these opens/creates might not be the most efficient way to do it, but it was the best I could do safely, without assuming any keys were defined.
-    reg = _winreg.OpenKey(_winreg.HKEY_CURRENT_USER,
-                          "Software\\Classes", 0, _winreg.KEY_SET_VALUE)
+    reg = winreg.OpenKey(winreg.HKEY_CURRENT_USER,
+                          "Software\\Classes", 0, winreg.KEY_SET_VALUE)
     # handily, this won't delete a key if it's already there.
-    k1 = _winreg.CreateKey(reg, filetype)
-    k2 = _winreg.CreateKey(k1, "shell")
-    k3 = _winreg.CreateKey(k2, registry_title)
-    k4 = _winreg.CreateKey(k3, "command")
+    k1 = winreg.CreateKey(reg, filetype)
+    k2 = winreg.CreateKey(k1, "shell")
+    k3 = winreg.CreateKey(k2, registry_title)
+    k4 = winreg.CreateKey(k3, "command")
     if title != None:
-        _winreg.SetValueEx(k3, None, 0, _winreg.REG_SZ, title)
-    _winreg.SetValueEx(k4, None, 0, _winreg.REG_SZ, command)
-    _winreg.CloseKey(k3)
-    _winreg.CloseKey(k2)
-    _winreg.CloseKey(k1)
-    _winreg.CloseKey(reg)
+        winreg.SetValueEx(k3, None, 0, winreg.REG_SZ, title)
+    winreg.SetValueEx(k4, None, 0, winreg.REG_SZ, command)
+    winreg.CloseKey(k3)
+    winreg.CloseKey(k2)
+    winreg.CloseKey(k1)
+    winreg.CloseKey(reg)
 
 
 define_action_on("*", "\"D:\Python3.6\\python.exe\"  \"D:\\Programming\\Webprojectgenerator\\webprojectgenerator.py\" \"%1\"",
