@@ -20,7 +20,7 @@ box and other quality of life things for the lazy dev in us all.
 
 ## Features currently done
 
-- Supports custom names for all files based on user-input
+- Supports custom names for all files based on user-input.
 
 - Supports dynamic linking based on the file names when created.
 
